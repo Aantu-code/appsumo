@@ -13,6 +13,17 @@ file.oninput = () =>{
 
 document.getElementById('open-popup-btn').addEventListener('click',function(){document.getElementsByClassName('popup')[0].classList.add('active');
 });
+document.getElementById('dismiss-popup-btn').addEventListener('click',function(){document.getElementsByClassName('popup')[0].classList.remove('active');
+});
+
+/************PROGRESS-BAR-JS********** */
+const progress = document.querySelector('.progress-bar');
+setTimeout(()=>{
+    progress.style.width = progress.getAttribute('data-done') + '%';
+    progress.style.opacity = 1;
+},1500)
+    
+
 
 /*********END-FIRST-SECTION-JS*********/
 
