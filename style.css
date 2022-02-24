@@ -10,52 +10,62 @@ body {
 }
 /************FIRST-SECTION-CSS**************/
 .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 0; */
+  /* transform: translate(-50%, -50%); */
 }
 
-.popup {
-  width: 550px;
-  height: 150px;
-  background: #ffffff;
-  z-index: 2;
-  /* position: relative; */
+.first-appsumo .popup {
+  width: 1087px;
+  /* height: 326px; */
+  /* background: #ffffffc4; */
+  /* z-index: 2; */
   top: -200%;
   transform: translate(-50%, -50%) scale(0.5);
-  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+  transition: opacity 100ms ease-in-out, top 1000ms ease-in-out,
     top 100ms ease-in-out, transform 100ms ease-in-out;
   opacity: 0;
 }
-.popup.active {
+.first-appsumo .popup.active {
   opacity: 1;
-  top: 20%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+  top: 0px;
+  transform: scale(1);
+  transition: transform 100ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
 }
 /***********POPUP-CSS*************/
-.progress {
-  background: #eaeaea;
-  height: 35px;
-  width: 450px;
-  position: absolute;
-  top: 50%;
+
+.first-appsumo .progress {
+  /* background: #f2ecec; */
+  height: 8px;
+  width: 1089px;
+  /* position: absolute; */
+  top: 8%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 20px;
+  /* transform: translate(-50%, -50%); */
+  /* border-radius: 20px; */
 }
-.progress-bar {
+.first-appsumo .progress-bar {
+  /* background: #5742e8; */
+  background: rgb(113, 21, 114);
+  background: linear-gradient(
+    90deg,
+    rgba(113, 21, 114, 1) 30%,
+    rgba(92, 58, 207, 1) 50%,
+    rgba(204, 89, 63, 1) 95%,
+    rgba(255, 255, 255, 1) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
+  /* font-size: 14px; */
   width: 0;
   height: 100%;
-  background: #533fcb;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   opacity: 0;
-  transition: 3s ease;
+  transition: 5s ease;
+  color: #8846ea;
+  font-weight: 500;
 }
 #dismiss-popup-btn {
   background: none;
@@ -66,9 +76,13 @@ body {
   color: #959191;
   cursor: pointer;
 }
-section {
+.first-appsumo,
+.two-appsumo,
+.three-appsumo {
   width: 1087px;
-  height: 326px;
+}
+.first-appsumo {
+  /* height: 326px; */
   background: linear-gradient(
     95.15deg,
     #533fcb -11.14%,
@@ -76,9 +90,11 @@ section {
     #8846ea 101.94%
   );
   border-radius: 5px;
-  z-index: -1;
-  position: absolute;
-  top: 0;
+  /* z-index: -1; */
+  /* position: absolute; */
+  /* top: 0; */
+  margin-bottom: 30px;
+  padding-bottom: 45px;
 }
 .text-content h3 {
   font-size: 25px;
@@ -93,20 +109,28 @@ section {
 }
 .text-content {
   color: #fff;
-  padding-top: 23px;
+  padding-top: 12px;
   padding-left: 49px;
 }
-form {
+.first-appsumo form,
+.two-appsumo form,
+.three-appsumo form {
   width: 1025px;
-  height: 183px;
-  background: #432fbe26;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translate(3%, 62%);
-  padding: 20px;
 }
-form .icon,
+.first-appsumo form {
+  /* height: 183px; */
+  background: #33229e26;
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
+  /* transform: translate(3%, 62%); */
+  padding: 20px 20px;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+  padding-bottom: 119px;
+}
+.first-appsumo label,
 .three-appsumo label,
 .two-appsumo label {
   background-image: url("./assets/img/Vector-6.png");
@@ -155,15 +179,18 @@ form div label::after {
   border-radius: 5px;
 }
 
-.button {
-  position: absolute;
-  top: 233px;
+.first-appsumo .button,
+.two-appsumo .button {
+  /* position: absolute; */
+  /* top: 233px; */
   background: #fff;
   width: 102px;
   height: 38px;
   border-radius: 5px;
   cursor: pointer;
-  left: 50px;
+  /* left: 50px; */
+  margin-top: -73px;
+  margin-left: 50px;
 }
 
 .button.active {
@@ -178,37 +205,105 @@ form div label::after {
 }
 
 .uploading img {
-  position: absolute;
+  /* position: absolute; */
   top: 3px;
   left: 60px;
 }
 
-.button .uploading {
+.first-appsumo .button .uploading,
+.two-appsumo .button .uploading {
   font-size: 14px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
   color: #8c8a8a;
   font-weight: 500;
-  position: relative;
-  margin-top: 9px;
+  /* position: relative; */
+  margin-top: 10px;
   display: block;
   transition: all 0.3s ease;
-  position: relative;
+  /* position: relative; */
+  padding: 10px;
+  display: flex;
 }
-.button .uploading img {
-  position: absolute;
-  top: 4px;
+.first-appsumo .button .uploading img,
+.two-appsumo .button .uploading img {
+  /* position: absolute; */
+  /* top: 4px; */
+  margin-left: 10px;
+  margin-top: 2px;
+  object-fit: contain;
 }
 /*********SECOUND-SECTION-CSS*********/
+.two-appsumo .popup-two {
+  width: 1087px;
+  /* height: 326px; */
+  /* background: #ffffffc4; */
+  /* z-index: 2; */
+  top: -200%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+    top 100ms ease-in-out, transform 100ms ease-in-out;
+  opacity: 0;
+}
+.two-appsumo .popup-two.active {
+  opacity: 1;
+  top: 0px;
+  transform: scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+/***********POPUP-CSS*************/
+
+.two-appsumo .progress-two {
+  /* background: #f2ecec; */
+  height: 8px;
+  width: 1089px;
+  /* position: absolute; */
+  top: 8%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  /* border-radius: 20px; */
+}
+.two-appsumo .progress-bar-two {
+  /* background: #5742e8; */
+  background: rgb(113, 21, 114);
+  background: linear-gradient(
+    90deg,
+    rgba(113, 21, 114, 1) 30%,
+    rgba(92, 58, 207, 1) 50%,
+    rgba(204, 89, 63, 1) 95%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 14px; */
+  width: 0;
+  height: 100%;
+  /* border-radius: 20px; */
+  opacity: 0;
+  transition: 5s ease;
+  color: #8846ea;
+  font-weight: 500;
+}
+
 .two-appsumo {
-  position: absolute;
-  top: 65%;
+  /* position: absolute; */
+  /* top: 65%; */
   background: linear-gradient(93.92deg, #8f0f8a -2.54%, #6d166f 101.64%);
-  height: 282px;
+  /* height: 282px; */
+  padding-bottom: 42px;
 }
 .two-appsumo form {
-  background: #5e0e5f40;
-  height: 135px;
-  top: 30px;
+  background: #2504261a;
+  /* height: 135px; */
+  /* top: 30px; */
+  margin-top: 20px;
+  padding: 20px 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+  padding-bottom: 70px;
+}
+.two-appsumo .text-content {
+  padding-top: 10px;
 }
 .two-appsumo form div label::after {
   display: none;
@@ -239,6 +334,9 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.two-appsumo .button {
+  margin-top: -71px;
+}
 .btn {
   color: #a19c9c;
   text-decoration: none;
@@ -254,39 +352,16 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 500;
 }
 /*********THREE-SECTION-CSS************/
-.centerr {
-  position: absolute;
-  top: 130%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.popupp {
-  width: 550px;
-  height: 150px;
-  background: #ededed;
-  z-index: 2;
-  position: absolute;
-  top: -189%;
-  transform: translate(-50%, -50%) scale(0.5);
-  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
-    top 100ms ease-in-out, transform 100ms ease-in-out;
-  opacity: 0;
-}
-.popupp.activee {
-  opacity: 1;
-  top: 140%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
-}
+
 .three-appsumo form {
-  position: absolute;
+  /* position: absolute; */
   background: #bb452b40;
   height: 135px;
-  top: 30px;
+  /* top: 30px; */
 }
 .three-appsumo {
-  position: absolute;
-  top: 122%;
+  /* position: absolute; */
+  /* top: 122%; */
   background: linear-gradient(93.99deg, #cb593f -0.98%, #df7e54 101.6%);
   height: 283px;
 }
@@ -298,7 +373,8 @@ input[type="number"]::-webkit-inner-spin-button {
   background: none;
 }
 .three-appsumo .button {
-  top: 193px;
+  /* top: 193px; */
+  margin-top: -61px;
 }
 /* .three-appsumo .text label::before {
   position: absolute;
