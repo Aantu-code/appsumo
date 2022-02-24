@@ -13,8 +13,6 @@ file.oninput = () =>{
 
 document.getElementById('open-popup-btn').addEventListener('click',function(){document.getElementsByClassName('popup')[0].classList.add('active');
 });
-// document.getElementById('dismiss-popup-btn').addEventListener('click',function(){document.getElementsByClassName('popup')[0].classList.remove('active');
-// });
 
 /************PROGRESS-BAR-JS********** */
 const progress = document.querySelector('.progress-bar');
@@ -31,6 +29,7 @@ setTimeout(()=>{
 /******START-SECOUND-SECTION-JS******/
 document.getElementById('open-popup-btnn').addEventListener('click',function(){document.getElementsByClassName('popup-two')[0].classList.add('active');
 });
+/************PROGRESS-BAR-JS********** */
 const progresss = document.querySelector('.progress-bar-two');
 setTimeout(()=>{
     progresss.style.width = progresss.getAttribute('data-done') + '%';
@@ -55,11 +54,11 @@ if(btn == 10){
 
 /******START-THIRD--SECTION-JS******/
 
-document.getElementById('open-popup-btnn').addEventListener('click',function(){document.getElementsByClassName('popupp')[0].classList.add('activee');
+document.getElementById('open-popup-btnnn').addEventListener('click',function(){document.getElementsByClassName('popup-three')[0].classList.add('active');
 });
 /************PROGRESS-BAR-JS********** */
-// const progresss = document.querySelector('.progress-barr');
-// setTimeout(()=>{
-//     progresss.style.width = progresss.getAttribute('data-done') + '%';
-//     progresss.style.opacity = 1;
-// },1500)
+const progressss = document.querySelector('.progress-bar-three');
+setTimeout(()=>{
+    progressss.style.width = progressss.getAttribute('data-done') + '%';
+    progressss.style.opacity = 1;
+},1500)
